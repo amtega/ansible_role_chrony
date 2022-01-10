@@ -1,0 +1,25 @@
+---
+
+- block:
+    - name: Setup chrony config file
+      template:
+        src: chrony.conf.j2
+        dest: "{{ chrony_config_file }}"
+        owner: root
+        group: root
+        mode: 0644
+      notify:
+        - enable chrony service
+
+    - name: Configure chrony init options
+      template:
+        src: chronyd_sysconfig.j2
+        dest: "{{ chrony_sysconfig_file }}"
+        owner: root
+        group: root
+        mode: 0644
+      notify:
+        - enable chrony service
+  tags:
+    - role::chrony
+    - role::chrony::configure
