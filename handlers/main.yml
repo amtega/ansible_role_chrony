@@ -1,2 +1,9 @@
 ---
 # Role handlers
+
+- name: Chrony service enable
+  service:
+    name: chronyd
+    state: restarted
+    enabled: yes
+  listen: enable chrony service

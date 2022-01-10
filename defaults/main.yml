@@ -1,2 +1,24 @@
 ---
 # Role default lower priority variables
+
+#  Default timezone. Valid values indicated in /usr/share/zoneinfo/
+
+chrony_time_zone: "Europe/Madrid"
+
+# Drift file defaul location
+
+chrony_drift_file: /var/lib/chrony/drift
+
+# List of chrony servers
+
+chrony_servers:
+  - hora.rediris.es
+  - cuco.rediris.es
+
+# String with server options. Defaut iburst for faster sync
+
+chrony_server_options: "iburst"
+
+# Chrony daemon init params.
+
+chrony_init_options: "-F 2"

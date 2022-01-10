@@ -4,6 +4,13 @@
   hosts: molecule_hosts
   gather_facts: no
   tasks:
-    - name: Verify to be done
-      debug:
-        msg: "Verify to be done"
+    - name: Pause to wait for chrony synchronization
+      pause:
+        minutes: 1
+
+    - name: Check if chrony is running an synchronized
+      command: chronyc tracking
+      register: chrony_check
+      changed_when: no
+      failed_when: >-
+        chrony_check.stdout is search("Not synchronised")

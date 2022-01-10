@@ -1,2 +1,7 @@
 ---
 # Role variables
+
+chrony_config_file: /etc/chrony.conf
+chrony_sysconfig_file: /etc/sysconfig/chronyd
+chrony_ntpdate_config_file: /etc/ntp/step-tickers
+chrony_ntpdate_sysconfig_file: /etc/sysconfig/ntpdate

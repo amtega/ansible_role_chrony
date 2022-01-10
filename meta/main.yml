@@ -1,23 +1,41 @@
 ---
+# Role dependencies
 
 galaxy_info:
-  role_name: role
+  role_name: chrony
   namespace: amtega
-  author: author name
-  description: role description
+  author: Juan Antonio Valiño Garcia
+  description: Configure chrony
   company: AMTEGA - Xunta de Galicia
   license: GPLv3 or EUPL
   min_ansible_version: 2.10
   platforms:
     - name: EL
       versions:
-        - 6
         - 7
         - 8
     - name: Fedora
       versions:
-        - 33
         - 34
-  galaxy_tags: []
+        - 35
+  galaxy_tags:
+    - system
+    - chrony
+    - date
 
-dependencies: []
+dependencies:
+  - role: amtega.check_platform
+    vars:
+      check_platform_distributions:
+        centos: 7
+        fedora: 34
+        redhat: 7
+
+  - role: amtega.packages
+    vars:
+      packages_os:
+        all:
+          all:
+            ntp: absent
+            ntpsec: absent
+            chrony: present

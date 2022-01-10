@@ -1,0 +1,6 @@
+{{ ansible_managed | comment }}
+
+driftfile {{ chrony_drift_file }}
+{% for item in chrony_servers %}
+server {{ item }} {{ chrony_server_options }}
+{% endfor %}

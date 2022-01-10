@@ -6,33 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### [MAJOR.MINOR.PATCH] - YYYY-MM-DD
+### [1.0.0] - 2022-01-10
 ### Added
-- Item 1.
-- Item 2.
-- Item N.
-
-### Changed
-- Item 1.
-- Item 2.
-- Item N.
-
-### Deprecated
-- Item 1.
-- Item 2.
-- Item N.
-
-### Fixed
-- Item 1.
-- Item 2.
-- Item N.
-
-### Removed
-- Item 1.
-- Item 2.
-- Item N.
-
-### Security
-- Item 1.
-- Item 2.
-- Item N.
+- First release. Related to ansible/main#240
