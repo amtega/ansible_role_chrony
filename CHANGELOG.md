@@ -8,4 +8,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [1.0.0] - 2022-01-10
 ### Added
-- First release
+- First release. Related to ansible/main#240
