@@ -1,0 +1,9 @@
+---
+
+- name: Set timezone
+  timezone:
+    name: "{{ chrony_time_zone }}"
+  tags:
+    - role::chrony
+    - role::chrony::configure
+    - role::chrony::timezone
