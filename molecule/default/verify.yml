@@ -5,11 +5,11 @@
   gather_facts: no
   tasks:
     - name: Pause to wait for chrony synchronization
-      pause:
+      ansible.builtin.pause:
         minutes: 1
 
     - name: Check if chrony is running an synchronized
-      command: chronyc tracking
+      ansible.builtin.command: chronyc tracking
       register: chrony_check
       changed_when: no
       failed_when: >-

@@ -1,6 +1,6 @@
 ---
 
-- name: Set timezone
+- name: Setup timezone
   timezone:
     name: "{{ chrony_time_zone }}"
   tags:
