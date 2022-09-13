@@ -2,7 +2,7 @@
 # Role handlers
 
 - name: Chrony service enable
-  service:
+  ansible.builtin.service:
     name: chronyd
     state: restarted
     enabled: yes

@@ -1,5 +1,4 @@
 ---
-# Role task
 
 - name: Configure timezone
   include_tasks: timezone.yml

@@ -1,8 +1,9 @@
 ---
 
-- block:
+- name: Configure chrony
+  block:
     - name: Setup chrony config file
-      template:
+      ansible.builtin.template:
         src: chrony.conf.j2
         dest: "{{ chrony_config_file }}"
         owner: root
@@ -12,7 +13,7 @@
         - enable chrony service
 
     - name: Configure chrony init options
-      template:
+      ansible.builtin.template:
         src: chronyd_sysconfig.j2
         dest: "{{ chrony_sysconfig_file }}"
         owner: root
